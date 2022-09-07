@@ -85,7 +85,7 @@ public class BorrarClienteVista extends javax.swing.JInternalFrame {
                     .addComponent(jTFAPELLIDO)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jTFCIUDAD, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(0, 78, Short.MAX_VALUE))
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(104, 104, 104))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
@@ -120,7 +120,7 @@ public class BorrarClienteVista extends javax.swing.JInternalFrame {
                     .addComponent(jTFCIUDAD, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jBSALIR)
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         pack();
