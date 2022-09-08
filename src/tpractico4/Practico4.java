@@ -8,7 +8,8 @@ public class Practico4 {
 
     public static void main(String[] args) {
         
-        Directorio direc = new Directorio();
+        Directorio direc = Directorio.getInstance();
+        
         direc.agragarCliente(2546812, new Cliente(12456,"Marta","Sosa","Santa Fe","Mitre 123"));
 //        direc.agragarCliente(5425, new Cliente(12456,"Clemente","Sosa","San Luis","Rivadavia 583"));
 //        direc.agragarCliente(8574, new Cliente(12456,"Jaime","Sosa","Cordoba","Santa fe 523"));

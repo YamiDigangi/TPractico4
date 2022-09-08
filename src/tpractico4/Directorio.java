@@ -11,11 +11,22 @@ import java.util.Set;
 public class Directorio {
 
     private HashMap<Long,Cliente> mapaCliente = new HashMap<>();
+    private static Directorio direc =  null;
 
-    public Directorio() {
+    
+    private Directorio() {
+    }
+    
+    
+    public static Directorio getInstance() {
+        if (direc == null){
+            direc = new Directorio();
+        }
+        return direc;
     }
 
-    public HashMap<Long, Cliente> getMapaCliente() {
+    
+     HashMap<Long, Cliente> getMapaCliente() {
         return mapaCliente;
     }
     
