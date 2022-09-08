@@ -1,6 +1,5 @@
 package tpractico4;
 
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -17,20 +16,16 @@ public class Directorio {
     private Directorio() {
     }
     
-    
     public static Directorio getInstance() {
         if (direc == null){
             direc = new Directorio();
         }
         return direc;
     }
-
     
      HashMap<Long, Cliente> getMapaCliente() {
         return mapaCliente;
     }
-    
-    
 
     public void agragarCliente(long tel, Cliente clie) {
         mapaCliente.put(tel, clie);
@@ -71,17 +66,11 @@ public class Directorio {
         
     }
 
-    public void borrarCliente(int dni) {
-        Set<Long> claves = mapaCliente.keySet();
-        Iterator it = claves.iterator();
-        Cliente clie;
-         while(it.hasNext()){  //recorro los telefonos 
-            long tell = (Long)it.next();
-            clie = mapaCliente.get(tell); //obtengo el cliente a partir de una clave. (de tipo telefono)
-            if (clie.getDni()==(dni)) { 
-               it.remove();
-            }  
-     }
+    public void borrarCliente(long tel) {
+        if (mapaCliente.remove(tel) != null){
+            System.out.println("Cliente Borrado");
+        } else {
+            System.out.println("No existe el cliente");
+        }
     }
 }
-
