@@ -6,6 +6,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import javax.swing.JOptionPane;
 
 public class Directorio {
 
@@ -29,6 +30,7 @@ public class Directorio {
 
     public void agragarCliente(long tel, Cliente clie) {
         mapaCliente.put(tel, clie);
+        JOptionPane.showMessageDialog(null,"Cliente agregado Exitosamente");
     }
 
     public Cliente buscarCliente(long tel) {
@@ -68,9 +70,9 @@ public class Directorio {
 
     public void borrarCliente(long tel) {
         if (mapaCliente.remove(tel) != null){
-            System.out.println("Cliente Borrado");
+            JOptionPane.showMessageDialog(null,"Cliente Borrado");
         } else {
-            System.out.println("No existe el cliente");
+            JOptionPane.showMessageDialog(null,"No existe el cliente");
         }
     }
 }

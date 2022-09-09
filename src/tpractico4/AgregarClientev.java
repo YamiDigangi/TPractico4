@@ -220,7 +220,7 @@ public class AgregarClientev extends javax.swing.JInternalFrame {
         String domicilio = jtfDomicilio.getText();
         
         Cliente cli = new Cliente(dni,nombre,apellido,ciudad,domicilio);
-        long telefono =Long.parseLong(jtfTelefono.getName());
+        long telefono =Long.parseLong(jtfTelefono.getText());
         Directorio df = Directorio.getInstance();
         df.agragarCliente(telefono, cli);
     }//GEN-LAST:event_jbGuardarActionPerformed
