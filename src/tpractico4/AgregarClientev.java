@@ -75,6 +75,9 @@ public class AgregarClientev extends javax.swing.JInternalFrame {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 jtfTelefonoFocusGained(evt);
             }
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                jtfTelefonoFocusLost(evt);
+            }
         });
 
         jbNuevo.setText("NUEVO");
@@ -235,20 +238,25 @@ public class AgregarClientev extends javax.swing.JInternalFrame {
         try{
         int dni =Integer.parseInt(jtfDni.getText());
         } catch(NumberFormatException exp){
-            JOptionPane.showInputDialog(this,"Ingrese DNI valido");
+            JOptionPane.showMessageDialog(this,"Ingrese DNI valido");
             jtfDni.requestFocus();
         }
     }//GEN-LAST:event_jtfDniFocusLost
 
     private void jtfTelefonoFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfTelefonoFocusGained
-        // TODO add your handling code here:
-//        try{ 
-//        long tel =Long.parseLong(jtfTelefono.getText());
-//        } catch(NumberFormatException exp){
-//            JOptionPane.showInputDialog(this,"Ingrese Telefono valido");
-//            jtfTelefono.requestFocus();
-//        }
+     
+       
     }//GEN-LAST:event_jtfTelefonoFocusGained
+
+    private void jtfTelefonoFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtfTelefonoFocusLost
+        
+         try{ 
+        long tel =Long.parseLong(jtfTelefono.getText());
+        } catch(NumberFormatException exp){
+            JOptionPane.showMessageDialog(this,"Ingrese Telefono valido");
+            jtfTelefono.requestFocus();
+        }
+    }//GEN-LAST:event_jtfTelefonoFocusLost
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

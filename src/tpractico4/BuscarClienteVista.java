@@ -18,7 +18,7 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jtfSalir = new javax.swing.JButton();
+        jbSalir = new javax.swing.JButton();
         jtfTelefono = new javax.swing.JTextField();
         jtfDni = new javax.swing.JTextField();
         jtfNombre = new javax.swing.JTextField();
@@ -37,10 +37,10 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
 
         jLabel5.setText("CIUDAD");
 
-        jtfSalir.setText("SALIR");
-        jtfSalir.addActionListener(new java.awt.event.ActionListener() {
+        jbSalir.setText("SALIR");
+        jbSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jtfSalirActionPerformed(evt);
+                jbSalirActionPerformed(evt);
             }
         });
 
@@ -50,12 +50,21 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
             }
         });
 
+        jtfDni.setEditable(false);
+
+        jtfNombre.setEditable(false);
+
+        jtfApellido.setEditable(false);
+
+        jtfCiudad.setEditable(false);
         jtfCiudad.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtfCiudadActionPerformed(evt);
             }
         });
 
+        jLabel6.setFont(new java.awt.Font("Calisto MT", 3, 24)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 51, 51));
         jLabel6.setText("Buscar Cliente");
 
         jbBuscar.setText("BUSCAR");
@@ -80,22 +89,23 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
                 .addGap(63, 63, 63)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jbBuscar)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtfSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jtfTelefono)
+                            .addComponent(jtfTelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 171, Short.MAX_VALUE)
                             .addComponent(jtfDni)
-                            .addComponent(jtfApellido, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jtfNombre)
-                            .addComponent(jtfCiudad))
-                        .addGap(115, 115, 115))))
+                            .addComponent(jtfCiudad)
+                            .addComponent(jtfApellido))
+                        .addGap(18, 18, 18)
+                        .addComponent(jbBuscar)
+                        .addGap(24, 24, 24))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel6)
-                .addGap(148, 148, 148))
+                .addComponent(jbSalir, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(171, 171, 171))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +115,8 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jtfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbBuscar))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
@@ -122,33 +133,31 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jtfCiudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jtfSalir)
-                    .addComponent(jbBuscar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addComponent(jbSalir)
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jtfSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfSalirActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtfSalirActionPerformed
+    private void jbSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalirActionPerformed
+        dispose();
+    }//GEN-LAST:event_jbSalirActionPerformed
 
     private void jtfTelefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfTelefonoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jtfTelefonoActionPerformed
 
     private void jbBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbBuscarActionPerformed
-        // TODO add your handling code here:
-//          long telefonoBuscar =Long.parseLong(jtfTelefono.getText());
-//       Ejercicio4.DirectorioTelefonico df=Ejercicio4.DirectorioTelefonico.getInstance();
-//       Cliente cli= df.buscarCliente(telefonoBuscar);
-//        jtfDni.setText(cli.getDni()+"");
-//        jtfApellido.setText(cli.getApellido());
-//        jtfNombre.setText(cli.getNombre());
-//        jtfCiudad.setText(cli.getCiudad());
+
+        long telefonoBuscar =Long.parseLong(jtfTelefono.getText());
+        Directorio df= Directorio.getInstance();
+        Cliente cli= df.buscarCliente(telefonoBuscar);
+        jtfDni.setText(cli.getDni()+"");
+        jtfApellido.setText(cli.getApellido());
+        jtfNombre.setText(cli.getNombre());
+        jtfCiudad.setText(cli.getCiudad());
 
     }//GEN-LAST:event_jbBuscarActionPerformed
 
@@ -165,11 +174,11 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JButton jbBuscar;
+    private javax.swing.JButton jbSalir;
     private javax.swing.JTextField jtfApellido;
     private javax.swing.JTextField jtfCiudad;
     private javax.swing.JTextField jtfDni;
     private javax.swing.JTextField jtfNombre;
-    private javax.swing.JButton jtfSalir;
     private javax.swing.JTextField jtfTelefono;
     // End of variables declaration//GEN-END:variables
 }
