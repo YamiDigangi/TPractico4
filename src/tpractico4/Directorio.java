@@ -72,7 +72,7 @@ public class Directorio {
         if (mapaCliente.remove(tel) != null){
             JOptionPane.showMessageDialog(null,"Cliente Borrado");
         } else {
-            JOptionPane.showMessageDialog(null,"No existe el cliente");
+            JOptionPane.showMessageDialog(null,"El cliente no existe");
         }
     }
 }

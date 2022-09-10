@@ -38,19 +38,29 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        escritorio.setBackground(new java.awt.Color(204, 204, 255));
+        escritorio.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        escritorio.setForeground(new java.awt.Color(0, 0, 51));
+
         javax.swing.GroupLayout escritorioLayout = new javax.swing.GroupLayout(escritorio);
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 396, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 279, Short.MAX_VALUE)
+            .addGap(0, 275, Short.MAX_VALUE)
         );
 
-        jMenu1.setText("Administracion");
+        jMenuBar1.setForeground(new java.awt.Color(153, 153, 255));
 
+        jMenu1.setForeground(new java.awt.Color(0, 102, 204));
+        jMenu1.setText("Administracion");
+        jMenu1.setFont(new java.awt.Font("Calisto MT", 1, 12)); // NOI18N
+
+        jMenuItem1.setFont(new java.awt.Font("Calisto MT", 0, 12)); // NOI18N
+        jMenuItem1.setForeground(new java.awt.Color(0, 102, 204));
         jMenuItem1.setText("Agregar Clientes ");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -59,6 +69,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
+        jMenuItem2.setFont(new java.awt.Font("Calisto MT", 0, 12)); // NOI18N
+        jMenuItem2.setForeground(new java.awt.Color(0, 102, 204));
         jMenuItem2.setText("Borrar Clientes");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -69,8 +81,12 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setForeground(new java.awt.Color(0, 102, 204));
         jMenu2.setText("Busquedas");
+        jMenu2.setFont(new java.awt.Font("Calisto MT", 1, 12)); // NOI18N
 
+        jMenuItem3.setFont(new java.awt.Font("Calisto MT", 0, 12)); // NOI18N
+        jMenuItem3.setForeground(new java.awt.Color(0, 102, 204));
         jMenuItem3.setText("Buscar Cliente");
         jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,7 +97,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu2);
 
+        jMenu3.setForeground(new java.awt.Color(0, 102, 204));
         jMenu3.setText("Salir");
+        jMenu3.setFont(new java.awt.Font("Calisto MT", 1, 12)); // NOI18N
         jMenuBar1.add(jMenu3);
 
         setJMenuBar(jMenuBar1);
