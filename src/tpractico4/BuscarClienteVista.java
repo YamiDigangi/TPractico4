@@ -1,6 +1,8 @@
 
 package tpractico4;
 
+import javax.swing.JOptionPane;
+
 
 public class BuscarClienteVista extends javax.swing.JInternalFrame {
 
@@ -212,11 +214,15 @@ public class BuscarClienteVista extends javax.swing.JInternalFrame {
         long telefonoBuscar =Long.parseLong(jtfTelefono.getText());
         Directorio df= Directorio.getInstance();
         Cliente cli= df.buscarCliente(telefonoBuscar);
+        if (cli !=null){
         jtfDni.setText(cli.getDni()+"");
         jtfApellido.setText(cli.getApellido());
         jtfNombre.setText(cli.getNombre());
         jtfCiudad.setText(cli.getCiudad());
         jtfDomicilio.setText(cli.getDomicilio());
+        } else {
+            JOptionPane.showMessageDialog(this,"El cliente no existe.");
+        }
     }//GEN-LAST:event_jbBuscarActionPerformed
 
     private void jtfCiudadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtfCiudadActionPerformed
