@@ -35,6 +35,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jmBusquedas = new javax.swing.JMenu();
         jmiBusCliente = new javax.swing.JMenuItem();
         jmSalir = new javax.swing.JMenu();
+        jmiSalir = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,6 +106,16 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 jmSalirActionPerformed(evt);
             }
         });
+
+        jmiSalir.setForeground(new java.awt.Color(0, 102, 204));
+        jmiSalir.setText("SALIR");
+        jmiSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmiSalirActionPerformed(evt);
+            }
+        });
+        jmSalir.add(jmiSalir);
+
         jMenuBar1.add(jmSalir);
 
         setJMenuBar(jMenuBar1);
@@ -152,8 +163,13 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jmSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmSalirActionPerformed
         // TODO add your handling code here:
-        System.exit(0);
+
     }//GEN-LAST:event_jmSalirActionPerformed
+
+    private void jmiSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmiSalirActionPerformed
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_jmiSalirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,5 +215,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jmiACliente;
     private javax.swing.JMenuItem jmiBCliente;
     private javax.swing.JMenuItem jmiBusCliente;
+    private javax.swing.JMenuItem jmiSalir;
     // End of variables declaration//GEN-END:variables
 }
