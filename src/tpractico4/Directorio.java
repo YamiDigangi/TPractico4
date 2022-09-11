@@ -71,8 +71,9 @@ public class Directorio {
     public void borrarCliente(long tel) {
         if (mapaCliente.remove(tel) != null){
             JOptionPane.showMessageDialog(null,"Cliente Borrado");
-        } else {
-            JOptionPane.showMessageDialog(null,"El cliente no existe");
         }
+//        } else {
+//            JOptionPane.showMessageDialog(null,"El cliente no existe");
+//        }
     }
 }
